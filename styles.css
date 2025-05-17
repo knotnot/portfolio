@@ -27,6 +27,12 @@ header {
 }
 
 
+.intro-cont {
+    display: flex;
+    justify-content: center;
+}
+
+
 .intro-contact {
     font-size: 18px;
     line-height: 1.8;
@@ -37,8 +43,11 @@ header {
     max-width: 400px;
     margin: 30px 0;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    text-align: left;
+    text-align: left; /* ทำให้ข้อความอยู่ด้านซ้าย */
 }
+
+
+
 
 
 
@@ -62,6 +71,32 @@ h1 {
         transform: translateY(0); /* กลับไปที่ตำแหน่งเดิม */
     }
 }
+
+
+
+.resume {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #363636; /* สีฟ้า */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+  }
+  
+  .resume:hover {
+    background-color: #000000; /* ฟ้าเข้มตอน hover */
+    transform: translateY(-5px);
+  }
+  
+
+
+
+
+
 
 h2 {
     font-size: 32px;
@@ -306,7 +341,7 @@ nav a {
 }
 
 #item1:hover .timeline-content {
-    background-image: url('https://i.imgur.com/EVrOdyG.jpeg'); /* ตัวอย่างรูปภาพ */
+    background-image: url('https://i.imgur.com/4miP5u4.jpeg'); /* ตัวอย่างรูปภาพ */
     background-size: cover;
     background-position: center;
 }
@@ -334,10 +369,7 @@ nav a {
     opacity: 1; /* ให้ข้อความแสดงในสถานะปกติ */
 }
 
-.timeline-item .timeline-content:hover {
-    transform: scale(1.05);
-    opacity: 0; /* ซ่อนข้อความเมื่อ hover */
-}
+
 
 .timeline-item .timeline-content h3,
 .timeline-item .timeline-content p {
@@ -349,9 +381,6 @@ nav a {
     opacity: 0; /* ซ่อนข้อความเมื่อ hover */
 }
 
-.timeline-item .timeline-content:hover {
-    opacity: 0; /* ซ่อนข้อความแล้วแสดงภาพพื้นหลัง */
-}
 
 
 
@@ -436,14 +465,14 @@ nav a {
 
 #projects {
     padding: 50px 20px;
-    background-color: #1e1e1e;
+    background-color: #000000;
     color: #f0f0f0;
     text-align: center;
 }
 
 .project-card {
     background-color: #2c2c2c;
-    border: 1px solid #444;
+    border: 1px solid #000000;
     border-radius: 10px;
     padding: 20px;
     margin: 20px auto;
@@ -551,12 +580,12 @@ nav a {
 .activity-details {
     display: none; /* ซ่อนรายละเอียดเมื่อเริ่มต้น */
     padding: 10px;
-    background-color: #000000; /* สีพื้นหลังให้เห็นชัด */
+    background-color: #545454; /* สีพื้นหลังให้เห็นชัด */  
     color: #ffffff; /* สีข้อความให้เห็นชัด */
     margin-top: 10px;
     border-radius: 5px;
     border: 1px solid #ccc; /* เพิ่มเส้นขอบให้เห็นชัดขึ้น */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* เพิ่มเงาเพื่อให้ดูเด่น */
+    box-shadow: 0 2px 5px rgba(66, 66, 66, 0.2); /* เพิ่มเงาเพื่อให้ดูเด่น */
 }
 
 

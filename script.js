@@ -6,3 +6,4 @@ function toggleDetails(activityId) {
         details.style.display = "none";
     }
 }
+
