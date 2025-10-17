@@ -343,19 +343,19 @@ nav a {
 }
 
 #item1:hover .timeline-content {
-    background-image: url('https://i.imgur.com/4miP5u4.jpeg'); /* ตัวอย่างรูปภาพ */
+    background-image: url('https://i.postimg.cc/ZKpGvxJb/CU-eng.jpg'); /* ตัวอย่างรูปภาพ */
     background-size: cover;
     background-position: center;
 }
 
 #item2:hover .timeline-content {
-    background-image: url('https://i.imgur.com/ER8WjnY.jpeg');
+    background-image: url('https://i.postimg.cc/SNdGPnrc/Triamudom.jpg');
     background-size: cover;
     background-position: center;
 }
 
 #item3:hover .timeline-content {
-    background-image: url('https://i.imgur.com/xOZBQZV.jpeg');
+    background-image: url('https://i.postimg.cc/W1r13kHy/Bodin.jpg');
     background-size: cover;
     background-position: center;
 }
