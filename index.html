@@ -33,7 +33,7 @@
     <div class="project-summary-brief">
         <div class="par-item"><strong>Problem:</strong> <span>Vulnerability to DDoS attacks causing server instability and frequent system crashes due to unmanaged traffic spikes.</span></div>
         <div class="par-item"><strong>Action:</strong> <span>Developed an Nginx-based load balancer and engineered a custom Python pipeline to ingest traffic log telemetry every 5 seconds.</span></div>
-        <div class="par-item"><strong>Result:</strong> <span>Achieved 98% detection accuracy with ML models and synchronized live data with Power BI for real-time monitoring.</span></div>
+        <div class="par-item"><strong>Result:</strong> <span>Engineered a high-throughput ingestion pipeline that continuously streamed web traffic logs from VM-hosted servers to a centralized MySQL instance, sustaining near real-time ingestion at 5-second intervals under simulated DDoS load — accumulating sufficient structured data to train and validate a machine learning model with 98% detection accuracy, with live traffic patterns monitored through an interactive Power BI dashboard.</span></div>
     </div>
     
     <details class="project-details">
@@ -242,11 +242,11 @@
             <strong>Database Integration:</strong><br>
             <span>Configured a dedicated <strong>MySQL</strong> container to serve as the destination for the processed data. This ensures persistent storage and allows for efficient querying of historical top-ranked locations.</span>
             <br><br>
-            <img src="images/Airflow_project/data-json.png" alt="Data Pipeline Architecture" style="max-width: 100%; border-radius: 10px; border: 1px solid #eee;">
+            <img src="images/Airflow_project/data-json.png" alt="Data from source" style="max-width: 100%; border-radius: 10px; border: 1px solid #eee;">
             <p style="text-align: center; font-size: 0.85rem; color: #666; font-style: italic; margin-top: 5px; margin-bottom: 15px;">
                 * Raw data in JSON format.
             </p>
-            <img src="images/Airflow_project/data-transform.png" alt="Data Pipeline Architecture" style="max-width: 100%; border-radius: 10px; border: 1px solid #eee;">
+            <img src="images/Airflow_project/data-transform.png" alt="Data transformation" style="max-width: 100%; border-radius: 10px; border: 1px solid #eee;">
             <p style="text-align: center; font-size: 0.85rem; color: #666; font-style: italic; margin-top: 5px; margin-bottom: 15px;">
                 * Processed data in python dict format.
             </p>
