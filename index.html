@@ -84,8 +84,71 @@
 </div>
 
 
+
+
+
+<div class="tech-project-card">
+    <h3>2. Global Flight Tracking & Airport Weather Data Pipeline (AWS + Databricks)
+        <a href="https://www.kaggle.com/datasets/knotnot/global-flight-tracking-airport-weather" target="_blank" style="color: var(--primary-blue); text-decoration: none; font-weight: bold; font-size: 0.9rem; margin-left: 5px;">
+            [View Dataset on Kaggle ↗]
+        </a>
+    </h3>
+    <p class="project-brief">
+        Built an end-to-end Big Data pipeline collecting real-time global flight tracking and airport weather data, processed through Medallion Architecture on Databricks and published to Kaggle.
+    </p>
+
+    <div class="project-summary-brief">
+        <div class="par-item"><strong>Problem:</strong> <span>No readily available dataset combining live global flight trajectories with concurrent airport weather conditions for analytical use.</span></div>
+        <div class="par-item"><strong>Action:</strong> <span>Engineered an automated ingestion pipeline using Python and AWS S3 to collect flight state vectors from OpenSky Network API and weather data from 30 Asia-Pacific airports every 5 minutes, with Hive-style Parquet partitioning.</span></div>
+        <div class="par-item"><strong>Result:</strong> <span>Processed 900,000+ flight records through Medallion Architecture (Bronze → Silver) on Databricks using Apache Spark for large-scale cleaning, deduplication, and transformation — publishing the final cleaned datasets publicly on Kaggle for community use.</span></div>
+    </div>
+
+    <details class="project-details">
+        <summary>Click for more details</summary>
+        <div class="details-content">
+            <strong>Source Code:</strong><br>
+            <a href="https://github.com/knotnot/BIGDATA-Plane-Weather" target="_blank">github.com/knotnot/BIGDATA-Plane-Weather</a><br><br>
+
+            <strong>Architecture:</strong><br>
+            <span>Designed a <strong>Medallion Architecture</strong> with Bronze layer storing raw Parquet files on <strong>AWS S3</strong> with Hive-style partitioning (year/month/day/hour), and Silver layer containing cleaned, deduplicated data processed by <strong>Apache Spark</strong> on <strong>Databricks</strong>.</span>
+            <br><br>
+
+            <strong>Data Ingestion:</strong><br>
+            <span>Built two automated Python ingestion scripts — one polling the <strong>OpenSky Network API</strong> for global flight state vectors every 5 minutes (~9,000 rows/snapshot), and another collecting weather conditions from <strong>Open-Meteo API</strong> across 30 major Asia-Pacific airports including Bangkok, Singapore, Tokyo, Dubai, and Sydney.</span>
+            <br><br>
+
+            <strong>Data Processing:</strong><br>
+            <span>Implemented PySpark transformations on <strong>Databricks</strong> for whitespace normalization, null handling, outlier removal (altitude/velocity bounds), type casting, and deduplication — reducing raw Bronze data by ~2.2% garbage records while preserving full flight trajectories.</span>
+            <br><br>
+
+            <strong>Outcome:</strong><br>
+            <span>Successfully published <strong>900,000+ cleaned flight records</strong> paired with weather observations across 30 airports to Kaggle, enabling join analysis between flight behavior and weather conditions by airport ICAO code and timestamp window.</span>
+        </div>
+    </details>
+
+    <div class="tag-container">
+        <span class="tag">Python</span>
+        <span class="tag">AWS S3</span>
+        <span class="tag">Apache Spark</span>
+        <span class="tag">Databricks</span>
+        <span class="tag">Parquet</span>
+        <span class="tag">Medallion Architecture</span>
+        <span class="tag">OpenSky API</span>
+        <span class="tag">Kaggle</span>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
     <div class="tech-project-card">
-    <h3>2. IoT Data Pipeline for Plant Growth Analytics</h3>   
+    <h3>3. IoT Data Pipeline for Plant Growth Analytics</h3>   
     <p class="project-brief">
         Architected a scalable IoT network with 18 sensors to automate plant growth research data collection.
         <div class="details-content">
@@ -129,7 +192,7 @@
     </div>
 
 <div class="tech-project-card">
-    <h3>3. Multi-Source Trend & Asset Correlation Pipeline (GCP)</h3>   
+    <h3>4. Multi-Source Trend & Asset Correlation Pipeline (GCP)</h3>   
     <p class="project-brief">
         Architected an automated ELT pipeline on Google Cloud Platform to analyze real-time correlations between global news trends, Bitcoin prices, and Gold rates.
     </p>
@@ -212,7 +275,7 @@
 
 
 <div class="tech-project-card">
-    <h3>4. Airflow Automate Pipeline</h3>   
+    <h3>5. Airflow Automate Pipeline</h3>   
     <p class="project-brief">
         Architected a robust local data orchestration system using Apache Airflow to capture and monitor search trends for travel destinations.
     </p>
